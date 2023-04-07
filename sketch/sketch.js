@@ -1,6 +1,3 @@
-import data from '/contenido/contenido.json' assert { type: 'json' };
-console.log(data[0].artista);
-
 const boton = document.getElementById("b" + 1);
 const botonIndex = document.querySelectorAll('.boton').length;
 

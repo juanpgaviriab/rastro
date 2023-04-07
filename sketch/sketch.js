@@ -12,6 +12,9 @@ let close = [];
 let img = [];
 
 let switch_info = [];
+fetch('/contenido.json')
+    .then(response => response.json())
+    .then(data => {
     
 for (let index = 0; index < botonIndex; index++) {
     let w = window.innerWidth;
@@ -94,6 +97,9 @@ for (let index = 0; index < botonIndex; index++) {
             }
         });
 }
+
+    })
+    .catch(error => console.error(error));
 
 
 

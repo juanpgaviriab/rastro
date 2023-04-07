@@ -1,3 +1,5 @@
+import data from '/contenido/contenido.json' assert { type: 'json' };
+
 const boton = document.getElementById("b" + 1);
 const botonIndex = document.querySelectorAll('.boton').length;
 
@@ -9,9 +11,6 @@ let close = [];
 let img = [];
 
 let switch_info = [];
-fetch('/contenido/contenido.json')
-    .then(response => response.json())
-    .then(data => {
     
 for (let index = 0; index < botonIndex; index++) {
     let w = window.innerWidth;
@@ -94,9 +93,4 @@ for (let index = 0; index < botonIndex; index++) {
             }
         });
 }
-
-})
-.catch(error => console.error(error));
-
-
 

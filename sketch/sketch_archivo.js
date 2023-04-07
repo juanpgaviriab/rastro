@@ -1,4 +1,4 @@
-import data from '/contenido/contenido.json' assert { type: 'json' };
+import data from 'contenido.json' assert { type: 'json' };
 
 const seccionIndex = document.querySelectorAll('.seccion').length;
 

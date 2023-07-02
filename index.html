@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>web objetos</title>
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+  <script src="libraries/p5.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/bradley/Blotter@master/build/blotter.min.js"></script>
+  <script src="https://rawgit.com/bradley/Blotter/master/build/materials/liquidDistortMaterial.js"></script>
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body onload="startTime()">
+  <header>
+    <p id="home"></p>
+    <p>Conjunto de acciones participativas, temporales y colectivas para humanos no autómatas</p>
+    <p id="date"></p>
+  </header>
+
+  <div class="col_info" id="col_info">
+    <div>
+      <img class="images" src="" alt="img" id="img">
+      <p id="t"></p>
+      <p id="a"></p>
+      <p id="d"></p>
+    </div>
+  </div>
+
+  <button class="button" id="button0"><li> Protocolo Mandarina </li></button>
+  <button class="button" id="button1"><li> Arcoíris </li></button>
+  <button class="button" id="button2"><li> Tarot de frecuencias </li></button>
+  <button class="button" id="button3"><li> Cadena de acciones </li></button>
+
+  <p class="rastro_name" id="rastro0">Juan Pablo Gaviria Bedoya</p>
+  <p class="rastro_name" id="rastro1">Ana Núñez Rodríguez y <br>Sebastián Sandoval Quimbayo</p>
+  <p class="rastro_name" id="rastro2">Ana Núñez Rodríguez y <br>Sebastián Sandoval Quimbayo</p>
+  <p class="rastro_name" id="rastro3">Andrés Martínez Ruiz</p>
+
+  <p class="artist_name" id="artist0">Bombón</p>
+  <p class="artist_name" id="artist1">Trucha</p>
+  <p class="artist_name" id="artist2">Alfonso Pretel</p>
+  <p class="artist_name" id="artist3">Phony Funny</p>
+
+  <footer>
+    <div>
+      <a href="index.html">Curaduría</a>
+      <a href="home.html">Consola</a>
+      <a href="archivo.html">Archivo</a>
+    </div>
+    <div>Curaduría por Rastro Studio</div>
+  </footer>
+
+  <!-- reloj -->
+  <script>
+    function startTime() {
+      const today = new Date();
+      let y = today.getFullYear();
+      let mon = today.getMonth();
+      let d = today.getDate();
+      let h = today.getHours();
+      let m = today.getMinutes();
+      let s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById('date').innerHTML = d + "." + (mon + 1) + "." + y + " / " + h + ":" + m + ":" + s;
+      setTimeout(startTime, 1000);
+    }
+
+    function checkTime(i) {
+      if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+      return i;
+    }
+  </script>
+
+  <script type="module" src="sketch/sketch.js"></script>
+</body>
+
+</html>
+
+<!-- 
+  <div class="container" id="b0">
+    <div class="drag"></div>
+    <details id="details0">
+      <summary id="title0"></summary>
+      <p class="information" id="description0" style="background-color: var(--c_0);"></p>
+      <p id="artists0"></p>
+    </details>
+    <img class="images" src="images/img_000.jpeg" alt="img0" id="img0">
+  </div> -->

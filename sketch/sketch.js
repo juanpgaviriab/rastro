@@ -1,5 +1,5 @@
 
-import data from '/contenido/contenido.json' assert { type: 'json' };
+import data from '/sketch/contenido/contenido.json' assert { type: 'json' };
 
 // const boton = document.getElementById("b" + 1);
 // const botonIndex = document.querySelectorAll('.boton').length;
